@@ -14,6 +14,10 @@ public class player : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) canJump = true;
+        if(Input.GetKeyDown(KeyCode.J)){
+            var bullet = Resources.Load<GameObject>("Bullet");
+            GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
